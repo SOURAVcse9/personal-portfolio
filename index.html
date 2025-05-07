@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>souravs portfolio</title>
-        <link rel="shortcut icon" href="images/pic.png" type="image/x-icon">
-       
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Ropa+Sans&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles/style.css">
-    
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web developer</title>
+    <link rel="shortcut icon" href="images/pic.png" type="image/x-icon">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Ropa+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+
+</head>
+
+<script>
+  function toggleMenu() {
+    const navMenu = document.getElementById("nav-menu");
+    navMenu.classList.toggle("show");
+  }
+</script>
+
 <body>
   <!-- Navbar -->
   <header class="navbar">
     <h2 class="logo">SOURAV DEBNATH</h2>
-    <nav>
-      <ul class="nav-links">
+    <div class="hamburger" onclick="toggleMenu()">
+      &#9776;
+    </div>
+    <nav id="nav-menu" class="nav-links">
+      <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
@@ -28,22 +39,23 @@
       </ul>
     </nav>
   </header>
+  
 
-  <!-- Main Banner -->
-  <section class="banner" id="home">
-    <div class="banner-content">
-      <h1>Hi, I'm Sourav Debnath</h1>
-      <p>A CSE Student & Future Developer</p>
-      <div class="banner-buttons">
-        <a href="assets/resume.pdf" download class="btn">Download CV</a>
-        <a href="#contact" class="btn">Hire Me</a>
-        <a href="#contact" class="btn">Contact Me</a>
-      </div>
+  <div class="bannar">
+    <div class="bannar-content">
+        <h3 class="bannar-greating">Hi I am</h3>
+        <h1 class="bannar-heading">SOURAV DEBNATH</h1>
+        <p class="bannar-discreption">
+          I am a passionate web developer. I love building modern and responsive websites.
+        </p>
+        <button class="btn-primary">Download CV</button>
+        <button class="btn-primary">Contact</button>
     </div>
-    <div class="banner-image">
-      <img src="images/photo2.png" alt="souravs profile picture" />
+    <div class="bannar-image">
+      <img src="images/profile.png" alt="profile picture">
     </div>
-  </section>
+  </div>
+  
   
   <!-- Sections (placeholders, will fill in next steps) -->
   <section id="about">...</section>

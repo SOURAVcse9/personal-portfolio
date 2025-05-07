@@ -1,38 +1,46 @@
-* {
+
+/* developer */
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  
   body {
-    font-family: 'Segoe UI', sans-serif;
-    
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Ropa Sans', sans-serif;
-    
-    background: #fdfdfd;
-    color: #333;
-    scroll-behavior: smooth;
+    font-family: 'Ropa Sans', 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0 20px;
     max-width: 1200px;
-    margin: 0 auto;
+    /* max-width: 80%; */
+    margin-inline: auto;
+    background-color: #fefefe;
+    color: #333;
+    /* display: flex;
+    flex-direction: column; */
+    align-items: center;
+    /* line-height: 1.6; */
+    /* font-size: 16px; */
+    overflow-x: hidden;
   }
+  
   
   .navbar {
     background: #ffffff;
-    padding: 1rem 2rem;
+    padding: 20px;
+    
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: sticky;
     top: 0;
-    z-index: 999;
+    z-index: 1000;
   }
   
   .nav-links {
     list-style: none;
     display: flex;
     gap: 1.5rem;
+    font-size: 20px;
   }
   
   .nav-links a {
@@ -43,57 +51,122 @@
   }
   
   .nav-links a:hover {
-    color: #0077cc;
+    color:#FD6E0A;;
   }
-  
-  .banner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* padding: 4rem 2rem; */
-    padding-left: 4rem;
-    padding-right: 0;;
-    background-image: url('../images/header_bg.jpg'); /* match body background */
-    background-size: cover;
-    background-position: center;
-    height: 60vh;
-    
-   
-    position: relative;
-    overflow: hidden;
 
-  }
-  
-  .banner-content {
-    flex: 1;
-    padding-right: 10rem;
-  }
-  
-  .banner-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Default nav menu setup */
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-links ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links ul li a:hover {
+  color: #FD6E0A;
+}
+
+
+
+
+  .btn-primary {
+    display: inline-flex;
     align-items: center;
-    max-width: 100%;
-    height: auto;
-    margin-left: 15rem;
-    border-radius: 10px;
-  }
-  
-  /* Button styling updated */
-  .banner-buttons .btn {
-    text-decoration: none;
-    margin: 0.5rem;
-    padding: 0.75rem 1.5rem;
-    background: #0077cc; /* same as navbar hover */
-    color: #fff;
+    justify-content: center;
     border-radius: 5px;
+    background: #FD6E0A;
+    border: none;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 15px 35px;
+    margin-right: 20px;
+    cursor: pointer;
     transition: background 0.3s;
   }
   
-  .banner-buttons .btn:hover {
-    background: #005fa3; /* darker shade on hover */
+  .btn-primary:hover {
+    background: #e55e00;
+    margin-right: 20px;
+    padding:15px 35px;
   }
+  
+  .bannar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFF8F3;
+    background-image: url('../images/header.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position:bottom right;
+    background-size: auto, auto; /* Keep original image size */
+    padding: 100px 20px 80px 20px;
+    margin: 0 auto;
+    height: 100vh;
+    gap: 30px;
+    position: relative;
+    overflow: hidden;
+    flex-wrap: wrap;
+  }
+  
+  
+  .bannar-content {
+    max-width: 600px;
+    flex: 1 1 300px;
+  }
+  
+  .bannar-greating {
+    color: #474747;
+    font-size: 45px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .bannar-heading {
+    color: #181818;
+    font-size: 85px;
+    font-weight: 700;
+    margin: 10px 0;
+  }
+  
+  .bannar-discreption {
+    color: #757575;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 20px;
+    max-width: 585px;
+    
+  }
+  .bannar-image {
+    position: absolute;
+    bottom: 0;
+    right: 0px; /* Slight inward offset */
+    max-width: 600px; /* Adjust to preferred size */
+    width: 100%;
+    height: auto;
+    z-index: 1; /* Ensure it's on top if needed */
+  }
+  .bannar-image img {
+    width: 100%;
+    height: auto;
+    /* box-shadow: 0 4px 12px rgba(0,0,0,0.1);  */
+    
+  }
+  
+  
   
   
   .footer {
@@ -101,5 +174,145 @@
     padding: 1rem;
     background: #fafafa;
     border-top: 1px solid #ddd;
+    margin-top:40px;
+    padding: 20px 0px;
   }
   
+
+
+
+
+
+
+  /* Responsive Design */
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+
+
+  .nav-links {
+    flex-direction: column;
+    font-size: 20px;
+    
+  }
+
+    .navbar {
+    /* /* flex-direction: column; */
+    align-items: flex-start;
+    flex-wrap: wrap; 
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    display: block;
+    cursor:pointer;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+  }
+
+  .nav-links.show {
+    display: block;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    padding: 5px 0;
+  }
+
+  .nav-links ul li {
+    margin: 0px 0;
+    text-align: center;
+  }
+
+  .bannar {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 10px;
+    height: auto;
+    text-align: center;
+  }
+
+  .bannar-content {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .bannar-heading {
+    font-size: 50px;
+  }
+
+  .bannar-greating {
+    font-size: 30px;
+  }
+
+  .bannar-discreption {
+    font-size: 18px;
+    line-height: 28px;
+    max-width: 100%;
+  }
+
+  .bannar-image {
+    position: relative;
+    
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto 0 auto;
+  }
+  .bannar-image img {
+    width: 100%;
+    height: auto;
+    /* max-width:300px; */
+    margin:0 auto;
+
+  }
+
+  .btn-primary {
+    font-size: 16px;
+    padding: 12px 25px;
+    margin-bottom: 10px;
+  }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .nav-links {
+    font-size: 16px;
+    gap: 8px;
+  }
+
+  .bannar-heading {
+    font-size: 36px;
+  }
+
+  .bannar-greating {
+    font-size: 24px;
+  }
+
+  .bannar-discreption {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .btn-primary {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .footer {
+    font-size: 14px;
+    padding: 15px 0;
+  }
+}
