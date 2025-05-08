@@ -1,32 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>web developer</title>
-    <link rel="shortcut icon" href="images/pic.png" type="image/x-icon">
-   
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Ropa+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Web Developer</title>
+  <link rel="shortcut icon" href="images/pic.png" type="image/x-icon" />
 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Ropa+Sans&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/style.css" />
 </head>
-
-<script>
-  function toggleMenu() {
-    const navMenu = document.getElementById("nav-menu");
-    navMenu.classList.toggle("show");
-  }
-</script>
 
 <body>
   <!-- Navbar -->
   <header class="navbar">
     <h2 class="logo">SOURAV DEBNATH</h2>
-    <div class="hamburger" onclick="toggleMenu()">
-      &#9776;
-    </div>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
     <nav id="nav-menu" class="nav-links">
       <ul>
         <li><a href="#about">About</a></li>
@@ -39,26 +32,39 @@
       </ul>
     </nav>
   </header>
-  
 
-  <div class="bannar">
+  <!-- Banner -->
+  <section class="bannar">
     <div class="bannar-content">
-        <h3 class="bannar-greating">Hi I am</h3>
-        <h1 class="bannar-heading">SOURAV DEBNATH</h1>
-        <p class="bannar-discreption">
-          I am a passionate web developer. I love building modern and responsive websites.
-        </p>
+      <h3 class="bannar-greating">Hi, I am</h3>
+      <h1 class="bannar-heading">SOURAV DEBNATH</h1>
+      <p class="bannar-discreption">
+        I am a passionate web developer. I love building modern and responsive websites.
+      </p>
+      <div class="button-group">
         <button class="btn-primary">Download CV</button>
         <button class="btn-primary">Contact</button>
+      </div>
     </div>
     <div class="bannar-image">
-      <img src="images/profile.png" alt="profile picture">
+      <img src="images/profile.png" alt="Profile picture" />
     </div>
-  </div>
-  
-  
-  <!-- Sections (placeholders, will fill in next steps) -->
-  <section id="about">...</section>
+  </section>
+
+  <!-- Placeholder Sections -->
+  <section class="about">
+    <div class="photo">
+      <img src="images/profile.png" alt="Profile picture" class="profile-photo" />
+    </div>
+    <div class="about-content">
+      <h2 class="about-heading">About Me</h2>
+      <p class="about-description">
+        Hello! My name is Sourav Debnath. I am a web developer with a passion for creating beautiful and functional websites.
+        I am a web developer with a passion for creating beautiful and functional websites.
+        I have experience in HTML, CSS, JavaScript, and various frameworks.
+      </p>
+      </div>
+    </section>
   <section id="skills">...</section>
   <section id="experience">...</section>
   <section id="education">...</section>
@@ -68,7 +74,15 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <p>© 2025 YourName | All Rights Reserved</p>
+    <p>© 2025 SOURAV DEBNATH | All Rights Reserved</p>
   </footer>
+
+  <!-- Script for Menu -->
+  <script>
+    function toggleMenu() {
+      const navMenu = document.getElementById("nav-menu");
+      navMenu.classList.toggle("show");
+    }
+  </script>
 </body>
 </html>
