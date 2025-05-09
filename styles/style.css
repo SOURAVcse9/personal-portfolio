@@ -1,5 +1,12 @@
 /* developer */
 /* redmi note 11 ip 192.168.179.247 */
+:root {
+  --primary-color: #ffbc0b;
+  --background-color: #121212;
+  --text-color: #f1f1f1;
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +15,7 @@
 
 body {
   font-family: 'Ropa Sans', 'Open Sans', sans-serif;
-  padding: 0 20px;
+  /* padding: 0 20px; */
   max-width: 1200px;
   margin-inline: auto;
   background-color: #121212;
@@ -16,6 +23,18 @@ body {
   overflow-x: hidden;
 }
 
+.logo a {
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: 700;
+  color: #f1f1f1;
+  font-family: 'Ropa Sans', sans-serif;
+  transition: color 0.3s ease;
+}
+.logo a span {
+  color: #ffbc0b;
+  font-weight: 700;
+}
 .navbar {
   background: #1e1e1e;
   padding: 20px;
@@ -43,7 +62,9 @@ body {
 }
 
 .nav-links a:hover {
-  color:#66FCF1;
+  color:#ffbc0b;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+
 }
 
 .hamburger {
@@ -67,7 +88,9 @@ body {
 }
 
 .nav-links ul li a:hover {
-  color: #66FCF1;
+  color: #ffbc0b;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+
 }
 
 .btn-primary {
@@ -85,9 +108,9 @@ body {
   cursor: pointer;
   transition: background 0.3s; */
 
-  background-color:#66FCF1;   
+  background-color:#ffbc0b;   
   color: black;              
-  border: 1px solid #66FCF1;
+  border: 1px solid #ffbc0b;
   padding: 10px;
   font-size: 1rem;
   border-radius: 6px;
@@ -101,17 +124,19 @@ body {
 
 .btn-primary:hover {
   /* background: #e55e00; */
-  background-color: #66FCF1; 
+  background-color: #f6e43d; 
   color: #1f1f1f;             
   border-color: #888;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+
 }
 
-.bannar {
+.banner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #1a1a1a;
-  padding: 100px 20px 80px 20px;
+  padding: 100px 20px 80px 100px;
   margin: 0 auto;
   /* height: 100vh; */
   gap: 30px;
@@ -120,26 +145,26 @@ body {
   flex-wrap: wrap;
 }
 
-.bannar-content {
+.banner-content {
   max-width: 600px;
   flex: 1 1 300px;
 }
 
-.bannar-greating {
+.banner-greating {
   color: #bbb;
   font-size: 45px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
-.bannar-heading {
+.banner-heading {
   color: #fff;
   font-size: 85px;
   font-weight: 700;
   margin: 10px 0;
 }
 
-.bannar-discreption {
+.banner-discreption {
   color: #ccc;
   font-size: 24px;
   line-height: 30px;
@@ -147,21 +172,30 @@ body {
   max-width: 585px;
 }
 
-.bannar-image {
+.banner-image {
   position: absolute;
   bottom: 0;
-  right: 0px;
-  max-width: 600px;
-  width: 100%;
-  height: 100%;
-  max-height: 98%;
+  right: 0;
+  width: auto;
+  max-width: 45%;
+  max-height: 100%;
   z-index: 1;
+  /* margin:0 auto; */
+  /* width: 100%;
+  height: 100%; */
+  /* max-height: 98%;
+  z-index: 1; */
 }
 
-.bannar-image img {
+.banner-image img {
   width: 100%;
   height: auto;
+  object-fit: contain;;
 }
+
+
+
+/* about section */
 
 .about {
   display: flex;
@@ -172,8 +206,8 @@ body {
   /* height: 80vh; */
   gap: 80px;
   flex-wrap: wrap;
-  position: relative;
-  overflow: hidden;
+  /* position: relative;
+  overflow: hidden; */
 }
 
 .photo {
@@ -184,7 +218,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  align-items: flex-end;
+  /* align-items: flex-end; */
   z-index: 1;
   margin-right: 30px;
 }
@@ -193,7 +227,7 @@ body {
   width: 100%;
   height: auto;
   border-radius: 50%;
-  box-shadow: 0 10px 30px #66FCF1;
+  box-shadow: 0 10px 30px #ffbc0b;
 }
 
 .about-content {
@@ -204,8 +238,9 @@ body {
   border: 1px solid #fff;
   border-radius: 12px;
   text-wrap: wrap;
+   width: 100%;
   max-width: 500px;
-  width: 100%;
+ 
   height: auto;
 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -214,7 +249,9 @@ body {
 
 .about-content:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px #66FCF1;
+  box-shadow: 0 10px 25px #ffbc0b;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+
 }
 
 .about-heading{
@@ -234,6 +271,62 @@ body {
   align-items: center;
   /* text-align: center; */
 }
+
+/* skill section */
+.skills-section {
+  background-color: #0e0e0e;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 34px;
+  margin-bottom: 40px;
+  color: #ffbc0b;
+  font-family: 'Ropa Sans', sans-serif;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skill-box {
+  background-color: #1a1a1a;
+  border: 1px solid #444;
+  border-radius: 12px;
+  padding: 20px 10px;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill-box:hover {
+  background-color:  #ffbc0b;
+  transform: scale(1.05);
+  border-color:  #000000;
+  color: #1a1a1a;
+  font-weight: 600;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+
+}
+
+.skill-icon, .skill-img {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.skill-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
 
 
 
@@ -284,31 +377,31 @@ body {
     text-align: center;
   }
 
-  .bannar {
+  .banner {
     flex-direction: column;
     text-align: center;
     padding: 40px 10px;
     height: auto;
   }
 
-  .bannar-content {
+  .banner-content {
     max-width: 100%;
   }
 
-  .bannar-heading {
+  .banner-heading {
     font-size: 50px;
   }
 
-  .bannar-greating {
+  .banner-greating {
     font-size: 30px;
   }
 
-  .bannar-discreption {
+  .banner-discreption {
     font-size: 18px;
     line-height: 28px;
   }
 
-  .bannar-image {
+  .banner-image {
     position: relative;
     max-width: 100%;
     display: flex;
@@ -316,7 +409,7 @@ body {
     margin: 20px auto 0 auto;
   }
 
-  .bannar-image img {
+  .banner-image img {
     width: 100%;
     height: auto;
     margin: 0 auto;
@@ -327,7 +420,54 @@ body {
     padding: 12px 25px;
     margin-bottom: 10px;
   }
+
+
+  .about {
+    flex-direction: column;
+    gap: 40px;
+    padding: 60px 20px;
+  }
+
+  .photo {
+    margin-right: 0;
+    max-width: 300px;
+  }
+
+  .about-content {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .about-heading {
+    font-size: 32px;
+  }
+
+  .about-description {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+  }
+
+  .skill-icon, .skill-img {
+    font-size: 32px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .skill-box {
+    padding: 15px 8px;
+  }
 }
+
+
 
 @media (max-width: 480px) {
   .navbar {
@@ -344,15 +484,15 @@ body {
     gap: 8px;
   }
 
-  .bannar-heading {
+  .banner-heading {
     font-size: 36px;
   }
 
-  .bannar-greating {
+  .banner-greating {
     font-size: 24px;
   }
 
-  .bannar-discreption {
+  .banner-discreption {
     font-size: 16px;
     line-height: 24px;
   }
@@ -360,6 +500,48 @@ body {
   .btn-primary {
     font-size: 14px;
     padding: 10px 20px;
+  }
+
+    .about {
+    padding: 40px 10px;
+  }
+
+  .photo {
+    max-width: 250px;
+    width: 90%;
+  }
+
+  .about-content {
+    max-width: 95%;
+    padding: 15px;
+  }
+
+  .about-heading {
+    font-size: 26px;
+  }
+
+  .about-description {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 15px;
+  }
+
+  .skill-icon, .skill-img {
+    font-size: 28px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .skill-box {
+    padding: 12px 6px;
   }
 
   .footer {
