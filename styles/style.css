@@ -1,10 +1,18 @@
 /* developer */
 /* redmi note 11 ip 192.168.179.247 */
 :root {
-  --primary-color: #ffbc0b;
-  --background-color: #121212;
-  --text-color: #f1f1f1;
+  --primary-color: #FFD700;
+  --secondary-color: #1E90FF; 
+  --background-color: #0D0D0D;
+  --surface-color: #181818;
+  --text-color: #E0E0E0;
+  --text-muted: #AAAAAA;
+  --accent-color: #FFC300;
+  --border-color: #333333;
 }
+
+
+
 
 
 * {
@@ -12,6 +20,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+
+
+
 
 body {
   font-family: 'Ropa Sans', 'Open Sans', sans-serif;
@@ -21,6 +33,47 @@ body {
   background-color: #121212;
   color: #f1f1f1;
   overflow-x: hidden;
+  position:relative;
+  
+
+
+
+}
+
+#starCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  display: block;
+  pointer-events: none;
+}
+.body-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+
+
+/* Smooth Background Gradient Animation */
+@keyframes backgroundAnimation {
+  0% {
+    background-color: #121212;
+  }
+  50% {
+    background-color: #1a1a1a;
+  }
+  100% {
+    background-color: #121212;
+  }
+}
+
+body {
+  animation: backgroundAnimation 10s infinite alternate;
 }
 
 .logo a {
@@ -36,7 +89,7 @@ body {
   font-weight: 700;
 }
 .navbar {
-  background: #1e1e1e;
+  background: #181818;
   padding: 20px;
   box-shadow: 0 2px 5px rgba(255, 255, 255, 0.05);
   display: flex;
@@ -62,7 +115,7 @@ body {
 }
 
 .nav-links a:hover {
-  color:#ffbc0b;
+  color:#FFD700;
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 
 }
@@ -108,8 +161,9 @@ body {
   cursor: pointer;
   transition: background 0.3s; */
 
-  background-color:#ffbc0b;   
-  color: black;              
+  background-color:#1E90FF;   
+  color: var(--background-color);
+             
   border: 1px solid #ffbc0b;
   padding: 10px;
   font-size: 1rem;
@@ -124,10 +178,10 @@ body {
 
 .btn-primary:hover {
   /* background: #e55e00; */
-  background-color: #f6e43d; 
+  background-color: #FFC300; 
   color: #1f1f1f;             
   border-color: #888;
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  /* transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; */
 
 }
 
@@ -135,7 +189,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1a1a1a;
+  background-color: #121212;
   padding: 100px 20px 80px 100px;
   margin: 0 auto;
   /* height: 100vh; */
@@ -151,7 +205,7 @@ body {
 }
 
 .banner-greating {
-  color: #bbb;
+  color: #aaaaaa;
   font-size: 45px;
   font-weight: 600;
   margin-bottom: 10px;
@@ -165,7 +219,7 @@ body {
 }
 
 .banner-discreption {
-  color: #ccc;
+  color: #b3b3b3;
   font-size: 24px;
   line-height: 30px;
   margin-bottom: 20px;
@@ -201,7 +255,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #252525;
+  background-color: #141414;
   padding: 80px 20px;
   /* height: 80vh; */
   gap: 80px;
@@ -233,7 +287,7 @@ body {
 .about-content {
   flex: 1 1 50%;
   padding: 30px;
-  background-color:#1a1a1a;
+  background-color:#111111;
   /* color: #fff; */
   border: 1px solid #fff;
   border-radius: 12px;
@@ -249,7 +303,7 @@ body {
 
 .about-content:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px #ffbc0b;
+  box-shadow: 0 10px 25px #FFD700;
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 
 }
@@ -262,8 +316,15 @@ body {
   align-items: center;
   text-align: center;
 }
+
+
+
 .about-description {
-  color: #ccc;
+  font-size: 18px;
+  line-height: 1.6;
+}
+.about-description {
+  color: #bbbbbb;
   font-size: 24px;
   font-weight: 400;
 
@@ -274,7 +335,7 @@ body {
 
 /* skill section */
 .skills-section {
-  background-color: #0e0e0e;
+  background-color: #0a0a0a;
   color: #fff;
   padding: 60px 20px;
   text-align: center;
@@ -296,23 +357,23 @@ body {
 }
 
 .skill-box {
-  background-color: #1a1a1a;
+  background-color: #151515;
   border: 1px solid #444;
   border-radius: 12px;
   padding: 20px 10px;
-  transition: 0.3s;
+  transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .skill-box:hover {
-  background-color:  #ffbc0b;
+  background-color:  #FFD700;
   transform: scale(1.05);
   border-color:  #000000;
   color: #1a1a1a;
   font-weight: 600;
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  /* transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; */
 
 }
 
@@ -326,15 +387,135 @@ body {
   height: 40px;
   object-fit: contain;
 }
+.skills-category {
+  margin-bottom: 50px;
+}
+
+.skill-category-title {
+  font-size: 24px;
+  color: #ffbc0b;
+  margin-bottom: 25px;
+  text-align: left;
+  max-width: 1000px;
+  margin-inline: auto;
+  padding-left: 10px;
+  font-weight: 600;
+}
+/* 
+experience-section */
+
+.experience-section {
+  background-color: #0a0a0a;
+  color: #f1f1f1;
+  padding-top: 0px;
+  padding-right:20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.experience-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.experience-box {
+  background-color: #151515;
+  border: 1px solid #333333;
+  border-radius: 12px;
+  padding: 25px;
+  transition: all 0.3s ease;
+  text-align: left;
+  position: relative;
+}
+
+/* .experience-box:hover {
+  background-color: #FFD700;
+  color: #121212;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.2);
+} */
+
+.job-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.company {
+  font-size: 18px;
+  color: #82c2f0;
+  margin-bottom: 10px;
+}
+
+.job-description {
+  font-size: 18px;
+  color: #CCCCCC;
+  line-height: 28px;
+}
+
+.short-desc {
+  max-height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.read-more {
+  background-color: #1E90FF;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  margin-top: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+  background-color: #ffbc0b;
+}
+
+.full-desc {
+  display: none;
+  margin-top: 0px;
+  font-size: 18px;
+  color: #bbb;
+}
 
 
+.experience-box.active .full-desc {
+  display: block;
+}
+
+/* Read More Button Toggle */
+.read-more.active + .full-desc {
+  display: block;
+}
+
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 
 
 .footer {
   text-align: center;
   padding: 1rem;
-  background: #1e1e1e;
-  border-top: 1px solid #333;
+  background: #121212;
+  border-top: 1px solid #888888;
   margin-top: 40px;
   padding: 20px 0px;
   color: #aaa;
@@ -343,6 +524,8 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
   .nav-links {
+    display: none;
+    width: 100%;
     flex-direction: column;
     font-size: 20px;
   }
@@ -361,11 +544,15 @@ body {
   .nav-links {
     display: none;
     width: 100%;
+    transition: all 0.3s ease-in-out;
   }
 
-  .nav-links.show {
-    display: block;
-  }
+.nav-links.show {
+  display: flex;
+  background-color: #181818;
+  border-top: 1px solid #333;
+}
+
 
   .nav-links ul {
     flex-direction: column;
@@ -465,6 +652,24 @@ body {
   .skill-box {
     padding: 15px 8px;
   }
+
+   .experience-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  .experience-box h3 {
+    font-size: 20px;
+  }
+
+  .experience-box p {
+    font-size: 15px;
+  }
+
+  .read-more {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
 }
 
 
@@ -484,26 +689,59 @@ body {
     gap: 8px;
   }
 
-  .banner-heading {
-    font-size: 36px;
+
+  .banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 15px;
+    position: relative; 
   }
 
-  .banner-greating {
-    font-size: 24px;
-  }
+.banner-content {
+    order: 1;
+    z-index: 1; 
+    margin-bottom: 40%;
+}
 
-  .banner-discreption {
+.banner-heading {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.banner-greating {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.banner-discreption {
     font-size: 16px;
-    line-height: 24px;
-  }
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
 
-  .btn-primary {
+.btn-primary {
     font-size: 14px;
-    padding: 10px 20px;
-  }
+    padding: 10px 24px;
+}
 
+.banner-image {
+    order: 2;
+    
+    width: 150%; 
+    height: auto; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0; 
+    object-fit:contain; 
+
+}
     .about {
     padding: 40px 10px;
+    flex-direction: column-reverse;
   }
 
   .photo {
@@ -542,6 +780,28 @@ body {
 
   .skill-box {
     padding: 12px 6px;
+  }
+
+  .experience-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .experience-box {
+    padding: 16px;
+  }
+
+  .experience-box h3 {
+    font-size: 18px;
+  }
+
+  .experience-box p {
+    font-size: 14px;
+  }
+
+  .read-more {
+    font-size: 13px;
+    padding: 5px 8px;
   }
 
   .footer {
