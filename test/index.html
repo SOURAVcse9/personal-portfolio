@@ -2,11 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Glowing Stars Background</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Gradient Button</title>
+  <style>
+    .gradient-button {
+      background: linear-gradient(to right, #f76b1c, #fdbb2d); /* deep to light orange */
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .gradient-button:hover {
+      transform: scale(1.05);
+    }
+
+    .chat-icon {
+      width: 16px;
+      height: 16px;
+      fill: white;
+    }
+  </style>
 </head>
 <body>
-  <canvas id="starCanvas"></canvas>
-  <script src="orbit.js"></script>
+
+  <button class="gradient-button">
+    <svg class="chat-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M4 4h16v12H5.17L4 17.17V4zm0-2c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2H4z"/>
+    </svg>
+    LET'S TALK
+  </button>
+
 </body>
 </html>

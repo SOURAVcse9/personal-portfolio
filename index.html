@@ -11,6 +11,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Ropa+Sans&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+
 
 
   <!-- Styles -->
@@ -321,7 +325,7 @@
 <!-- education section -->
 
 <section id="education" class="section">
-  <h2 class="edu">Education</h2>
+  <h2 class="section-title">Education</h2>
   <div class="education-table-container">
     <table class="education-table">
       <thead>
@@ -429,19 +433,93 @@
 </section>
 
 
+  <!-- <section id="contact">...</section> -->
+
+<section class="lets-talk" id="contact">
+  <div class="talk-container">
+    <!-- Left: Text and Form -->
+    <div class="talk-content">
+      <h2>Let's <span class="highlight">talk</span></h2>
+      <p>Feel free to reach out via email, phone, or WhatsApp. Or, send me a direct message below.</p>
+
+      <!-- Contact Links -->
+      <div class="contact-links">
+        <a href="mailto:sourav.cse9.bu@gmail.com"><i class="fas fa-envelope"></i> sourav.cse9.bu@gmail.com</a>
+        <a href="tel:+8801782427035"><i class="fas fa-phone"></i> +8801782427035</a>
+        <a href="https://wa.me/8801782427035" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Chat</a>
+      </div>
+
+     <form id="contactForm">
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="email" placeholder="Your Email" required />
+  <textarea name="message" placeholder="Your Message" required></textarea>
+
+  <button type="submit" class="send-btn">Send Message</button>
+</form>
+<p id="form-status" style="margin-top: 10px;"></p>
+    </div>
+
+    <!-- Right: Image -->
+    <div class="talk-image">
+      <img src="images/picture3-removebg-preview.png" alt="Contact Me" />
+    </div>
+  </div>
+</section>
 
 
 
 
-  <section id="contact">...</section>
 
   <!-- Footer -->
-  <footer class="footer">
-    <p>© 2025 SOURAV DEBNATH | All Rights Reserved</p>
-  </footer>
+<footer class="footer">
+  <div class="footer-content">
+    <div class="left">
+      <h2 class="gradient-text">LET’S WORK TOGETHER</h2>
+      <div class="buttons">
+        <a href="mailto:sourav.cse9.bu@gmail.com" class="email-btn">
+          <i class="fas fa-envelope"></i> Email Me
+        </a>
+        <a href="https://wa.me/8801782427035" class="whatsapp-btn">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div class="middle">
+      <h4>What I Do?</h4>
+      <ul>
+        <li>Web Development</li>
+        <li>Mobile App Design</li>
+        <li>Problem Solving</li>
+        <li>Graphics Design</li>
+        <li>Machine Learning</li>
+      </ul>
+    </div>
+
+    <div class="right">
+      <p>University of Barishal, Barishal</p>
+      <h4>Connect with me</h4>
+      <hr />
+      <div class="socials">
+  <a href="https://www.facebook.com/share/1AGSn7KyC9/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://www.instagram.com/sd.sourav_/" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="https://x.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a> <!-- X = Twitter -->
+  <a href="https://www.linkedin.com/in/souravdebnaths/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+</div>
+
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright © 2025 SOURAV. All Rights Reserved</p>
+    <a href="#top" class="back-to-top">BACK TO TOP <span>↑</span></a>
+  </div>
+</footer>
+
 </div>
   <script src="js/script.js"></script>
   <script src="js/stars.js"></script>
   <script src="js/slider.js"></script>
+  <script src="js/sendmessage.js"></script>
 </body>
 </html>

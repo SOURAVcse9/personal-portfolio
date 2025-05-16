@@ -1,15 +1,18 @@
-body, html {
-  margin: 0;
-  padding: 0;
+.blob-shape {
+  width: 1000px;
+  height: 1000px;
+  background: #fcd52e; /* yellow */
+  clip-path: path("M317.6,305.5Q260,371,179,364Q98,357,76,278.5Q54,200,103,134.5Q152,69,226,96.5Q300,124,334,162Q368,200,317.6,305.5Z");
+  position: relative;
   overflow: hidden;
-  background: black;
-  height: 100%;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#starCanvas {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
+.blob-shape img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
